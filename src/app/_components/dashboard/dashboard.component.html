@@ -1,0 +1,6 @@
+<ul *ngIf="!isEmptyObject(userinfo)">
+  <li>{{userinfo.data.user.name}}</li>
+</ul>
+<p>this is text para</p>
+
+<button class="btn btn-lg btn-custom" type="submit" (click)="logout()" [disabled]="loader" style="width: 150px;"><span *ngIf="!loader">Log Out</span> <i *ngIf="loader" class="fas fa-spinner fa-spin"></i></button>
