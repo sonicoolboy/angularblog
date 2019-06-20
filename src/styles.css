@@ -1,18 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,,400,500,,600,700,800,900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500,700");
+
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~@fortawesome/fontawesome-free/css/all.css";
 
-body{
-    font-family: 'Montserrat', sans-serif;
+body {
+	font-size: 14px;
+	margin: 0;
+	padding-bottom: 60px;
+	overflow-x: hidden;
+	font-size: 14px;
+	background-color: #f3f6f8;
+	font-family: "Roboto", sans-serif;
 }
-
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+	font-family: "Rubik", sans-serif;
 	margin: 10px 0;
 }
 h2 {
 	line-height: 35px;
 	font-size: 30px;
+}
+h5 {
+	font-size: 15px;
+}
+h6 {
+	font-size: 12px;
+}
+a, a:hover, a:focus, a:active {	
+	text-decoration: none !important;
 }
 .form-control {
 	border: 1px solid #d9e3e9;
@@ -87,4 +104,19 @@ label {
 .alert-danger ul{
 	margin:  0;
 	padding-left: 10px;
+}
+.text-muted {
+	color: #98a6ad !important;
+}
+.badge {
+	font-family: "Rubik", sans-serif;
+	box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.06), 0 1px 0 0 rgba(0, 0, 0, 0.02);
+	padding: .35em .5em;
+	font-weight: 500;
+}
+.badge-danger {
+	background-color: #f1556c;
+}
+.pull-right {
+	float: right;
 }

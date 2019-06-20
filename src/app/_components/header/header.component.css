@@ -1,0 +1,129 @@
+.navbar-custom {
+	border-radius: 0;
+	margin-bottom: 0;
+	padding: 0 15px;
+	min-height: 70px;
+}
+.button-menu-mobile.disable-btn {
+	display: none;
+}
+.button-menu-mobile {
+	border: none;
+	color: #313a46;
+	display: inline-block;
+	height: 70px;
+	width: 60px;
+	background-color: transparent;
+	font-size: 16px;
+	cursor: pointer;
+}
+.page-title-box {
+	font-size: 13px;
+}
+.page-title {
+	font-size: 18px;
+	margin-bottom: 6px;
+}
+.page-title-box .breadcrumb {
+	margin-bottom: 0;
+	padding: 0;
+	background-color: transparent;
+}
+.breadcrumb {
+	background-color: transparent;
+	margin-bottom: 15px;
+	padding-top: 10px;
+	padding-left: 0;
+}
+.breadcrumb a {
+	color: #98a6ad;
+}
+.breadcrumb > li + li::before {
+	padding: 0 5px;
+	color: #98a6ad;
+	content: "\f105" !important;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+.navbar-custom .topbar-right-menu li {
+	float: left;
+}
+.navbar-custom .nav-link {
+	padding: 0;
+	line-height: 70px;
+	color: rgba(49, 58, 70, 0.8);
+}
+.notification-list .noti-icon {
+	font-size: 20px;
+	padding: 0 15px;
+	vertical-align: middle;
+}
+.notification-list .noti-icon-badge {
+	display: inline-block;
+	position: absolute;
+	top: 14px;
+	right: 8px;
+}
+.badge {
+	font-family: "Rubik", sans-serif;
+	box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.06), 0 1px 0 0 rgba(0, 0, 0, 0.02);
+	padding: .35em .5em;
+	font-weight: 500;
+}
+.badge-danger {
+	background-color: #f1556c;
+}
+.badge-custom {
+	background: #02c0ce;
+	color: #ffffff;
+}
+.nav-link.dropdown-toggle.arrow-none::after {
+	display: none;
+}
+.nav-user img {
+	height: 32px;
+	width: 32px;
+}
+.rounded-circle {
+	border-radius: 50% !important;
+}
+.nav-user {
+	padding: 0 12px !important;
+}
+.navbar-custom .menu-left {
+	overflow: hidden;
+}
+.nav-user .fas.fa-chevron-down {
+	font-size: 10px;
+	margin-left: 5px;
+}
+.notification-list .noti-title {
+	background-color: #ffffff;
+	padding: 7px 20px;
+}
+.text-overflow {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	display: block;
+	width: 100%;
+	overflow: hidden;
+}
+.dropdown-menu {
+	font-size: 14px;
+}
+.dropdown-item {
+	padding: 6px 1.5rem;
+}
+.notification-list .notify-item {
+	padding: 10px 20px;
+}
+.notification-list .profile-dropdown .notify-item {
+	padding: 7px 20px;
+}
+.profile-dropdown i {
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.profile-dropdown span {
+	vertical-align: middle;
+}

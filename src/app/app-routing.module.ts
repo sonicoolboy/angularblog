@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 import { LoginComponent } from './_components/login/login.component';
 import { RegisterComponent } from './_components/register/register.component';
 import { DashboardComponent } from './_components/dashboard/dashboard.component';
@@ -23,11 +23,22 @@ const routes: Routes = [
     path: "dashboard",
     component: DashboardComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: "**",
+    component: DashboardComponent,
   }
 ];
 
+
+const routerOptions: ExtraOptions = {
+  useHash: false,
+  anchorScrolling: 'disabled',
+  // ...any other options you'd like to use
+};
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, routerOptions)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
