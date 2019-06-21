@@ -10,8 +10,7 @@ export class SidebarComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {    
-    this.onClick('load');
+  ngOnInit() {
     console.log(window.location.href);
     setTimeout(function() {
       console.log($('#sidebar-menu a').href);
@@ -33,12 +32,12 @@ export class SidebarComponent implements OnInit {
   }
 
 
-  onClick(event) {
-    var target = event.target || event.srcElement || event.currentTarget;
-    var idAttr = target.attributes.href;
-    var value = idAttr.nodeValue;
-    alert(target);
-  }
+  // onClick(event) {
+  //   var target = event.target || event.srcElement || event.currentTarget;
+  //   var idAttr = target.attributes.href;
+  //   var value = idAttr.nodeValue;
+  //   alert(target);
+  // }
   
 
 }

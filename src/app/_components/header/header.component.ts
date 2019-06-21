@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
 
   userinfo: any = [];
   loader: boolean = false;
+  navUserActive: boolean = false;
 
   ngOnInit() {
     this.getUserInfo();
