@@ -20,11 +20,8 @@ export class HeaderComponent implements OnInit {
   }
 
   getUserInfo() {
-    this.userinfo = [];
-    this.userService.getUserInfo().subscribe((data: {}) => {
-      // console.log(data);
-      this.userinfo = data;
-    });
+    this.userinfo = JSON.parse(localStorage.getItem('user_info'));
+    // console.log(this.userinfo);
   }
 
   logout() {

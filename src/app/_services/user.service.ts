@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-
+import { map, catchError, tap } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
@@ -15,7 +15,9 @@ export class UserService {
   }
 
   login(userInfo):  Observable<any> {
-    return this.http.post<any>(endpoint + 'login', JSON.stringify(userInfo), httpOptions);
+    return this.http.post(endpoint + 'login', JSON.stringify(userInfo), httpOptions).pipe(
+      catchError(this.handleError<any>('login'))
+    )
   }
 
   register(userInfo):  Observable<any> {
@@ -28,7 +30,6 @@ export class UserService {
 
   isLoggedIn(){
     return localStorage.getItem('ACCESS_TOKEN') !== null;
-
   }
 
   logout(){
@@ -51,7 +52,7 @@ export class UserService {
 }
 
 const api_token = localStorage.getItem('ACCESS_TOKEN');
-const endpoint = 'http://localhost/lara_passport/public/api/'; 
+const endpoint = 'http://blog.lr/api/'; 
 
 const httpOptions = {
   headers: new HttpHeaders({
