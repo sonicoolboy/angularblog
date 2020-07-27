@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/_services/user.service';
 import { Router } from '@angular/router';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-header',
@@ -9,10 +10,10 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(private userService: UserService, private router: Router, public app: AppComponent) { }
 
   userinfo: any = [];
-  loader: boolean = false;
+
   navUserActive: boolean = false;
 
   ngOnInit() {
@@ -20,25 +21,26 @@ export class HeaderComponent implements OnInit {
   }
 
   getUserInfo() {
-    this.userinfo = JSON.parse(localStorage.getItem('user_info'));
-    // console.log(this.userinfo);
+    this.userService.getUserInfo().subscribe(
+      (res) => {
+        this.userinfo = res.data;
+        // console.log(this.userinfo);
+      }
+    );
+    
   }
 
   logout() {
-    this.userService.logout().subscribe((data: {}) => {
-      // console.log(data);
+    this.app.loader = true;
+    this.userService.logout().subscribe((data: {}) => {      
       localStorage.removeItem('ACCESS_TOKEN');
       this.router.navigateByUrl('/login');
+      this.app.loader = false;
     });
   }
 
   isEmptyObject(obj) {
     return (obj && (Object.keys(obj).length === 0));
   }
-
-
-
-
-
 
 }

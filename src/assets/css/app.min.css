@@ -1814,8 +1814,7 @@ body.enlarged {
 .waves-circle {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  -webkit-mask-image: -webkit-radial-gradient(circle, #fff 100%, #000 100%);
-  mask-image: -webkit-radial-gradient(circle, #fff 100%, #000 100%);
+  -webkit-mask-image: -webkit-radial-gradient(circle, #fff 100%, #000 100%)
 }
 
 .waves-button,
@@ -1872,7 +1871,6 @@ body.enlarged {
 
 .waves-float {
   -webkit-mask-image: none;
-  mask-image: none;
   -webkit-box-shadow: 0 1px 1.5px 1px rgba(0, 0, 0, .12);
   box-shadow: 0 1px 1.5px 1px rgba(0, 0, 0, .12);
   -webkit-transition: all .3s;
@@ -2704,7 +2702,7 @@ body.enlarged {
 }
 
 .wizard.vertical>.steps {
-  /* display: inline; */
+  display: inline;
   float: left;
   width: 30%
 }
@@ -2717,12 +2715,12 @@ body.enlarged {
 .wizard.vertical>.content {
   width: 65%;
   margin: 0 2.5% .5em;
-  /* display: inline; */
+  display: inline;
   float: left
 }
 
 .wizard.vertical>.actions {
-  /* display: inline; */
+  display: inline;
   float: right;
   width: 95%;
   margin: 0 2.5%;
@@ -4705,7 +4703,7 @@ div.dt-button-info h2 {
 
 .mail-list a {
   font-family: Rubik, sans-serif;
-  /* vertical-align: middle; */
+  vertical-align: middle;
   color: #f3f3f3;
   padding: 10px 15px;
   display: block

@@ -25,7 +25,7 @@ export class UserService {
   }
 
   getUserInfo(): Observable<any> {
-    return this.http.post<any>(endpoint + 'details', '', tokenHeader);
+    return this.http.get<any>(endpoint + 'details', tokenHeader);
   }
 
   isLoggedIn(){

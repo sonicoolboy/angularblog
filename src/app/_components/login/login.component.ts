@@ -54,15 +54,14 @@ export class LoginComponent implements OnInit {
             
             // console.log(this.userInfo.data.token);
             if(this.userInfo.errors.length == 0){
-              console.log(this.userInfo);
+              // console.log(this.userInfo);
                 localStorage.setItem('ACCESS_TOKEN', this.userInfo.data.token);
-                localStorage.setItem('user_info', JSON.stringify(this.userInfo.data));
+                // localStorage.setItem('user_info', JSON.stringify(this.userInfo.data));
                 if (this.userService.isLoggedIn) {
                     this.router.navigateByUrl('/dashboard');
                 }
-            }else{
-                this.app.loader = false;
             }
+            this.app.loader = false;
       }     
     );
   }
